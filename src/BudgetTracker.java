@@ -336,7 +336,7 @@ public class BudgetTracker extends JFrame {
             // Get the selected file path
             String filePath = fileChooser.getSelectedFile().getAbsolutePath();
 
-            // Ensure the file has a .csv extension
+            // Ensuring the file has a .csv extension
             if (!filePath.endsWith(".csv")) {
                 filePath += ".csv";
             }
@@ -357,8 +357,8 @@ public class BudgetTracker extends JFrame {
 
                 // Write totals
                 writer.println();
-                writer.printf("Total Income,%.2f%n", totalIncome);
-                writer.printf("Total Expenses,%.2f%n", totalExpense);
+                writer.printf("Total Income($),%.2f%n", totalIncome);
+                writer.printf("Total Expenses($),%.2f%n", totalExpense);
 
                 // Notify the user
                 JOptionPane.showMessageDialog(this, "Results exported successfully to: " + filePath, "Export Successful", JOptionPane.INFORMATION_MESSAGE);
